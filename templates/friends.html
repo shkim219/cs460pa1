@@ -1,0 +1,28 @@
+<head>
+    <title>Friends</title>
+</head>
+<body>
+    <div class="title">
+        <h1>See friends</h1>
+    </div>
+    <h2>Current Friends</h2>
+    {% if friends %}
+        <h3>
+            {message}}
+        </h3>
+    {% endif %}
+    <h2>Add Friends</h2>
+    {% if error %}
+    <h3>{{ error }}</h3>
+    {% endif %}
+    <div id="content">
+            <form method="post" action="/friends">
+                <label for="name">Add Friend:</label>
+                <input type="text" name="name" required='true' /><br />
+                <label for="email">Enter friend email:</label>
+                <input type="email" name="email" required='true'/><br />
+                <input type="submit" />
+            </form>
+         </div>
+    
+</body>
